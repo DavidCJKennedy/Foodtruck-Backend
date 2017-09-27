@@ -29,7 +29,7 @@ passport.serializeUser(Account.serializeUser());
 passport.deserializeUser(Account.deserializeUser());
 
 // api routes v1
-app.use('/v1', routes);
+app.use('/api/v1', routes); //need to change for live server, change url
 
 app.server.listen(config.port);
 
