@@ -33,6 +33,9 @@ app.use('/api/v1', routes); //need to change for live server, change url
 
 app.server.listen(config.port);
 
-console.log(`Started on port ${app.server.address().port}`);
+app.server.on("listening", function() {
+  console.log(`Started on port ${app.server.address().port}`);
+});
+
 
 export default app;
